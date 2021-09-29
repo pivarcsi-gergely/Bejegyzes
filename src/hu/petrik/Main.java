@@ -60,6 +60,14 @@ public class Main {
         }
     }
 
+    public static void bejegyzes2Modosit(){
+        System.out.println("Módosítsd a 2. bejegyzés tartalmát!");
+        String tartalomModositott = sc.nextLine();
+        bejegyzesLista.get(2).setTartalom(tartalomModositott);
+    }
+
+
+
     public static void main(String[] args) {
         Bejegyzes b1 = new Bejegyzes("Ben Affleck", "Totalra nem tudom, mit keresek itt.");
         Bejegyzes b2 = new Bejegyzes("Jozska", "Utalom a beragado Shift billentyuket.");
@@ -70,6 +78,8 @@ public class Main {
 
         felhaszKiirat();
         fajlBeolvasas("bejegyzesek.txt");
+        likeOszto();
+        bejegyzes2Modosit();
 
 
 
