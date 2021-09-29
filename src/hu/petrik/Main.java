@@ -67,6 +67,16 @@ public class Main {
     }
 
 
+    public static void legnepszerubbBejegyzes(){
+        int legtobbLike = bejegyzesLista.get(0).getLikeok();
+        for (Bejegyzes elem: bejegyzesLista) {
+            if (elem.getLikeok() > legtobbLike){
+                legtobbLike = elem.getLikeok();
+            }
+        }
+        System.out.println("A legnépszerűbb bejegyzés like-jainak száma: " + legtobbLike);
+    }
+
 
     public static void main(String[] args) {
         Bejegyzes b1 = new Bejegyzes("Ben Affleck", "Totalra nem tudom, mit keresek itt.");
@@ -84,7 +94,10 @@ public class Main {
         for (Bejegyzes elem: bejegyzesLista) {
             System.out.println(elem);
         }
+        System.out.println("\n");
 
+
+        legnepszerubbBejegyzes();
 
 
     }
