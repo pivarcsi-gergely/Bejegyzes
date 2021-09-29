@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -50,6 +51,15 @@ public class Main {
         }
     }
 
+    public static void likeOszto(){
+        int osztandoLikeokSzama = bejegyzesLista.size() * 20;
+
+        for (int i = 0; i < osztandoLikeokSzama; i++) {
+            double veletlen = Math.random() * bejegyzesLista.size();
+            bejegyzesLista.get((int)(veletlen)).like();
+        }
+    }
+
     public static void main(String[] args) {
         Bejegyzes b1 = new Bejegyzes("Ben Affleck", "Totalra nem tudom, mit keresek itt.");
         Bejegyzes b2 = new Bejegyzes("Jozska", "Utalom a beragado Shift billentyuket.");
@@ -60,6 +70,7 @@ public class Main {
 
         felhaszKiirat();
         fajlBeolvasas("bejegyzesek.txt");
+
 
 
     }
