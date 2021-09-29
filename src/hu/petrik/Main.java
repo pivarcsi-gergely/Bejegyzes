@@ -63,7 +63,7 @@ public class Main {
     public static void bejegyzes2Modosit(){
         System.out.println("Módosítsd a 2. bejegyzés tartalmát!");
         String tartalomModositott = sc.nextLine();
-        bejegyzesLista.get(2).setTartalom(tartalomModositott);
+        bejegyzesLista.get(1).setTartalom(tartalomModositott);
     }
 
 
@@ -80,6 +80,10 @@ public class Main {
         fajlBeolvasas("bejegyzesek.txt");
         likeOszto();
         bejegyzes2Modosit();
+
+        for (Bejegyzes elem: bejegyzesLista) {
+            System.out.println(elem);
+        }
 
 
 
