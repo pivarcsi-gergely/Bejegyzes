@@ -46,8 +46,14 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
+        if (getLetrejott() != getSzerkesztve()){
+            return getSzerzo() + " - " + getLikeok() + " - " + getLetrejott() + "\n"
+                    + getTartalom();
+        }
+        else {
             return getSzerzo() + " - " + getLikeok() + " - " + getLetrejott() + "\n"
                     + "Szerkesztve: " + getSzerkesztve() + "\n"
                     + getTartalom();
+        }
     }
 }
