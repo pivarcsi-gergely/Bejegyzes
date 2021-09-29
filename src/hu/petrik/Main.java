@@ -87,7 +87,7 @@ public class Main {
                 vanE = false;
             }
         }
-        if (vanE == true){
+        if (vanE){
             System.out.println("Van olyan bejegyzes, ami 35-nél több like-ot kapott.");
         }
         else{
