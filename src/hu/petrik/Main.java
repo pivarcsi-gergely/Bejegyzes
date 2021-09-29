@@ -40,6 +40,7 @@ public class Main {
                 String[] adatTag = sor.split(";");
                 Bejegyzes bejegyzes = new Bejegyzes(adatTag[0], adatTag[1]);
                 bejegyzesLista.add(bejegyzes);
+                sor = br.readLine();
             }
             fr.close();
             br.close();
