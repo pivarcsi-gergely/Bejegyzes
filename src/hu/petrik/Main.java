@@ -12,7 +12,18 @@ public class Main {
         String beolvasottSor = sc.nextLine();
         int beolvasSorSzam = Integer.parseInt(beolvasottSor);
             if (beolvasSorSzam == 0){
-                System.out.println("Látom, nem adott meg sorszamot");
+                System.out.println("Látom, nem adott meg sorszámot. Akkor lépjünk is tovább!");
+            }
+            else{
+                for (int i = 0; i < beolvasSorSzam; i++) {
+                    System.out.println("A bejegyzés szerzője?");
+                    String szerzo = sc.nextLine();
+                    System.out.println("A bejegyzés tartalma?");
+                    String tartalom = sc.nextLine();
+                    System.out.println();
+                    bejegyzesLista.add(new Bejegyzes(szerzo, tartalom));
+                    System.out.println("Bejegyzés hozzáadva a listához. \n");
+                }
             }
     }
 
