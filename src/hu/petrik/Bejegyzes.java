@@ -43,4 +43,11 @@ public class Bejegyzes {
     public void like(){
         likeok += 1;
     }
+
+    @Override
+    public String toString() {
+            return getSzerzo() + " - " + getLikeok() + " - " + getLetrejott() + "\n"
+                    + "Szerkesztve: " + getSzerkesztve() + "\n"
+                    + getTartalom();
+    }
 }
