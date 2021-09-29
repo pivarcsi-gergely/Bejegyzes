@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner sc = new Scanner(System.in);
     public static ArrayList<Bejegyzes> bejegyzesLista = new ArrayList<>();
+    public static ArrayList<Bejegyzes> rendezettBejegyzesLista = new ArrayList<>();
 
     public static void felhaszKiirat(){
         System.out.println("Te is meg tudsz adni bejegyzés(eke)t! Adj meg egy sorszámot (ennyi bejegyzést fogsz kiírni)!");
@@ -103,6 +104,11 @@ public class Main {
             }
         }
         System.out.println("A 15 like-nál kevesebbel rendelkező bejegyzések száma: " + dbSzam);
+    }
+
+    public static void atrendezesLikeokSzerint(){
+        /*int legtobbLike = legnepszerubbBejegyzes();
+        Bejegyzes legtobbLike = bejegyzesLista.get(legnepszerubbBejegyzes(););*/
     }
 
 
