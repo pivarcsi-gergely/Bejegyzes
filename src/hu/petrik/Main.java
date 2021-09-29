@@ -77,6 +77,24 @@ public class Main {
         System.out.println("A legnépszerűbb bejegyzés like-jainak száma: " + legtobbLike);
     }
 
+    public static void vanE35nelTobb(){
+        boolean vanE = false;
+        for (Bejegyzes elem: bejegyzesLista) {
+            if (elem.getLikeok() > 35){
+                vanE = true;
+            }
+            else{
+                vanE = false;
+            }
+        }
+        if (vanE == true){
+            System.out.println("Van olyan bejegyzes, ami 35-nél több like-ot kapott.");
+        }
+        else{
+            System.out.println("Nincsen olyan bejegyzes, ami 35-nél több like-ot kapott.");
+        }
+    }
+
 
     public static void main(String[] args) {
         Bejegyzes b1 = new Bejegyzes("Ben Affleck", "Totalra nem tudom, mit keresek itt.");
@@ -98,6 +116,8 @@ public class Main {
 
 
         legnepszerubbBejegyzes();
+        vanE35nelTobb();
+
 
 
     }
