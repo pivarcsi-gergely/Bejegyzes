@@ -95,6 +95,16 @@ public class Main {
         }
     }
 
+    public static void kevesebbMint15Like(){
+        int dbSzam = 0;
+        for (Bejegyzes elem: bejegyzesLista) {
+            if (elem.getLikeok() < 15){
+                dbSzam += 1;
+            }
+        }
+        System.out.println("A 15 like-nál kevesebbel rendelkező bejegyzések száma: " + dbSzam);
+    }
+
 
     public static void main(String[] args) {
         Bejegyzes b1 = new Bejegyzes("Ben Affleck", "Totalra nem tudom, mit keresek itt.");
@@ -117,7 +127,7 @@ public class Main {
 
         legnepszerubbBejegyzes();
         vanE35nelTobb();
-
+        kevesebbMint15Like();
 
 
     }
